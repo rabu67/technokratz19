@@ -1,0 +1,844 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="animate.css">
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  <title>Technokratz 2k19</title>
+  <style>
+  
+  #particles-js
+  {
+	height: 90%;
+  background-image: url('images/image1.jpg');
+  max-height: 500px;
+  }
+  .btext{
+    color: #f9f3f4;
+    position: absolute;
+    text-align: center;
+    top: 20%;
+    width: 100%;
+    line-height: 1.4em;
+  }
+  
+#clockdiv{
+	font-family: sans-serif;
+	color: #fff;
+	display: inline-block;
+	font-weight: 100;
+	text-align: center;
+	font-size: 30px;
+}
+
+#clockdiv > div{
+	padding: 5px;
+	border-radius: 2px;
+	background:slategrey;
+	display: inline-block;
+}
+
+#clockdiv div > span{
+	padding: 5px;
+	border-radius: 2px;
+	background:midnightblue
+	display: inline-block;
+}
+
+.smalltext{
+	padding-top: 5px;
+	font-size: 16px;
+}
+.about
+{
+  background-color:gainsboro;
+  font-size: 22px;
+  font-weight: 600;
+  font-family: monospace;
+  margin-top: 40px;
+		margin: 0px;
+		padding: 10px;  
+		line-height: 1.7em; 
+}
+.overlay {
+  width: 100%;
+}
+
+.h100 {
+  height: 100%;
+}
+
+.header {
+  font-family: 'Lato', sans-serif;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: bold;
+  margin: 10px;
+  text-rendering: optimizeLegibility;
+}
+
+.overlay,
+.parallax-text {
+  /*font-size: 80px;*/
+  font-family: 'Lato', sans-serif;
+  letter-spacing: .11em;
+  font-size: 2.25em;
+  text-rendering: optimizeLegibility;
+}
+.section {
+  height: 400px;
+}
+
+p {
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 16px;
+}
+.parallax-container{
+  max-height: 200px;
+}
+.tabs .indicator{
+  background-color: #1a237e;
+}
+.tabs .tab a:focus, .tabs .tab a:focus.active {
+  background: transparent;
+}
+
+
+
+.schedule-warp{
+    padding-right:20px;
+    padding-left:20px;
+    padding: 20px 30px;
+    border: solid 1px #ddd;
+    background-color: #f5f5f5;
+    -webkit-transition: all 0.7s cubic-bezier(0.11, 0.6, 0.24, 0.89);
+    transition: all 0.7s cubic-bezier(0.11, 0.6, 0.24, 0.89);
+}
+.schedule{
+    background-color:#fff;
+}
+.schedule-warp:hover {
+    box-shadow: 0 6px 20px rgba(0,0,0,.07);
+    border: solid 1px rgba(100,40,145,.97);
+}
+.schedule{
+    padding:100px 0px;
+    background-color: #ecedf0;
+     font-family: 'Titillium Web';
+}
+.schedule-tag{
+    color:#fff;
+    background-color: #6164b2;
+    padding:3px 8px;
+    margin-right: 15px;
+    width: 90px;
+    font-family: 'Titillium Web';
+    text-align: center;
+}
+.schedule-header span{
+    display: inline-block;
+    margin-right:25px;
+}
+.schedule-header{
+    margin-bottom:80px;
+}
+.schedule-card{
+    position: relative;
+    margin-bottom: 0.7em;
+}
+.schedule-card:hover .insidebox {
+    transform: scale(1.033);
+    /* box-shadow: 0 5px 18px rgba(0, 0, 0, 0.1); */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.schedule-card:hover:after {
+    background: #8a56d1;
+    width: 25px;
+}
+.schedule-card:after {
+    height: 2px;
+    width: 22px;
+    background: #ddd;
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -22px;
+    transition: all 0.3s ease-in;
+}
+.insidebox { 
+    box-shadow: 0 0px 5px rgba(0,0,0,.07);
+    background: #ffffff;
+    width: 100%;
+    height: auto;
+    display: flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -webkit-flex;
+    display: -o-flex;
+    -webkit-align-items: center;
+    align-items: center;
+    padding: 10px 20px;
+    color: #6164B2;
+    transition: all 0.2s ease-in;
+/*    justify-content: center;*/
+}
+
+.day-one{
+    margin-bottom:50px;
+    font-weight: bold;
+    font-size: 20px;
+    color: #6164B2;    
+    }
+
+.fixed-action-btn{
+  right: 0px;
+}
+.box14{position:relative}
+.box15,.box17,.box18{box-shadow:0 0 5px #7e7d7d;text-align:center}
+.box14:before{content:"";width:100%;height:100%;background:rgba(0,0,0,.5);position:absolute;top:0;left:0;opacity:0;transition:all .35s ease 0s}
+.box14:hover:before{opacity:1}
+.box14 img{width:100%;height:auto}
+.box14 .box-content{width:90%;height:90%;position:absolute;top:5%;left:5%}
+.box14 .box-content:after,.box14 .box-content:before{content:"";position:absolute;top:0;left:0;bottom:0;right:0;opacity:0;transition:all .7s ease 0s}
+.box14 .box-content:before{border-bottom:1px solid rgba(255,255,255,.5);border-top:1px solid rgba(255,255,255,.5);transform:scale(0,1);transform-origin:0 0 0}
+.box14 .box-content:after{border-left:1px solid rgba(255,255,255,.5);border-right:1px solid rgba(255,255,255,.5);transform:scale(1,0);transform-origin:100% 0 0}
+.box14:hover .box-content:after,.box14:hover .box-content:before{opacity:1;transform:scale(1);transition-delay:.15s}
+.box14 .title{font-size:21px;font-weight:700;color:#fff;margin:15px 0;opacity:0;transform:translate3d(0,-50px,0);transition:transform .5s ease 0s}
+.box14:hover .title{opacity:1;transform:translate3d(0,0,0)}
+.box14 .post{font-size:14px;color:#fff;padding:10px;background:#d79719;opacity:0;border-radius:0 19px;transform:translate3d(0,-50px,0);transition:all .7s ease 0s}
+.box14 .icon,.box15 .icon{padding:0;list-style:none}
+.box14:hover .post{opacity:1;transform:translate3d(0,0,0);transition-delay:.15s}
+.box14 .icon{width:100%;margin:0;position:absolute;bottom:-10px;left:0;opacity:0;z-index:1;transition:all .7s ease 0s}
+.box14:hover .icon{bottom:20px;opacity:1;transition-delay:.15s}
+.box14 .icon li a{display:block;width:40px;height:40px;line-height:40px;border:1px solid #fff;border-radius:0 16px;font-size:14px;color:#fff;margin-right:5px;transition:all .4s ease 0s}
+.box14 .icon li a:hover{background:#d79719;border-color:#d79719}
+@media only screen and (max-width:990px){.box14{margin-bottom:30px}
+}
+
+#footer
+{
+  background-color: #0D0E1F;
+}
+#footer hr{
+  height: 10px;
+  color: #00e5ff;
+  background-color: #00e5ff;
+}
+#footer p{
+  line-height: 0.2em;
+}
+#footer a{
+  border: 10px solid #00e5ff;
+  border-radius: 0px;
+  background-color: #0D0E1F;
+  color: black;
+}
+#schedule{
+  background-color: #eee2dc;
+  margin: 0%;
+}
+#guest{
+  margin-top: 0%;
+  background-color:#def2f1;
+  padding: 1%;
+}
+
+  </style>
+</head>
+<body>
+  <!--home-->
+  <div class="container-fluid scrollspy" id="home">
+  <div id="particles-js">
+      <div class="navbar">
+          <nav class="nav-wrapper transparent">
+            <div class="container">
+              <a href="#" class="brand-logo hide-on-small-only ">TECHNOKRATZ</a>
+              <a href="#" class="sidenav-trigger" data-target="mobile-links">
+                <i class="material-icons">menu</i>
+              </a>
+              <ul class="right hide-on-med-and-down">
+                <b><li><a href="#home">HOME</a></li>
+                  <li><a href="#abt">ABOUT</a></li>
+                  <li><a href="#events">EVENTS</a></li>
+                  <li><a href="#schedule">SCHEDULE</a></li>
+                  <li><a href="#cntct">CONTACT US</a></li>
+                </b>
+                 </ul>
+            </div>
+          </nav>
+        </div>
+        
+      
+      
+        <ul class="sidenav left-align" id="mobile-links">
+                <li><a class="center-align"><b>TECHNOKRATZ 2K19</b></a></li>
+                <li><a href="#home">HOME</a></li><hr>
+                <li><a href="#abt">ABOUT</a></li><hr>
+                <li><a href="#events">EVENTS</a></li><hr>
+                <li><a href="#schedule">SCHEDULE</a></li><hr>
+                <li><a href="#cntct">CONTACT US</a></li><hr>
+                <br><br>
+                <li class="center-align"><img src="images/logo.png" alt="" class="responsive-img"></li>
+        </ul>
+      <div class="btext">
+        <p><b><h3>TECHNOKRATZ 2K19</h3></b></p>
+        <p>A NATIONAL LEVEL TECHNICAL SYMPOSIUM CONDUCTED BY</p>
+        <p>DEPARTMENT OF COMPUTER SCIENCE AND ENGINEERING</p>
+        <p>ANAND INSTITUTE OF HIGHER TECHNOLOGY</p>
+        <p><b>FEB 24 2019</b></p><br><br>
+      </div> 
+    </div>
+  </div>
+
+  <!--about-->
+  <div class="container-fluid scrollspy" id="abt">
+    <div class="about">
+        <marquee class="hide-on-med-and-up indigo-text"><i>Switch to Desktop site for better Visuals!</i></marquee>
+      <p><div class="container center-align">
+          Technokratz 2K19 is a National Level Technical Symposium conducted by the Department of Computer Science and Engineering.After the grand success of Technokratz 2K18, we are back with a bang!.Brace yourself, as the most awaited Technokratz 2k19 is all set to rock with cool events in the month of Febrauary. Follow our Facebook and Instagram page for any future updates about the event.</center>
+        </p>
+      
+      <h4>Event will start in</h4>
+      <div id="clockdiv">
+        <div>
+          <span class="days"></span>
+          <div class="smalltext">Days</div>
+        </div>
+        <div>
+          <span class="hours"></span>
+          <div class="smalltext">Hours</div>
+        </div>
+        <div>
+          <span class="minutes"></span>
+          <div class="smalltext">Mins</div>
+        </div>
+        <div>
+          <span class="seconds"></span>
+          <div class="smalltext">Secs</div>
+        </div>
+      </div></div>
+      
+    </div>
+     </div>
+
+
+     <!--event parallax-->
+     <div class="parallax-container">
+        <div class="valign-wrapper h100">
+          <h1 class=" white-text overlay center-align header">
+            We Have List of Events Lined Up For You...ENJOY!
+          </h1>
+          <div class="parallax grey lighten-1">
+            <img src="images/parallax1.jpg">
+          </div>
+        </div>
+      </div><br>
+
+
+      <!--events-->
+      <div class="container scrollspy" id="events">
+          <div class="row">
+              <div class="col s12 l4">
+                <img src="images/pp.jpg" alt="" class="responsive-img materialboxed">
+              </div>
+              <div class="col s12 l6 offset-17 push-l1">
+                <ul class="tabs">
+                  <li class="tab col s6">
+                    <a href="#pp" class="indigo-text text-darken-4">About</a>
+                  </li>
+                  <li class="tab col s6">
+                      <a href="#rr1" class="indigo-text text-darken-4">Rules and Regulations</a>
+                    </li>
+                </ul>
+                <div class="col s12 offset-l1" id="pp">
+                  <p class="flow-text indigo-text text-darken 4">PAPER PRESENTATION</p>
+                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                </div>
+                <div class="col s12 offset-l1" id="rr1">
+                    <p class="flow-text indigo-text text-darken 4">RULES AND REGULATIONS</p>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                </div>
+              </div>
+            </div><hr>
+
+            <div class="row right-align">
+              <div class="class col s12 l4 offset-l1 push-l6">
+                  <img src="images/coding.jpg" alt="" class="responsive-img materialboxed">
+              </div>
+              <div class="col s12 l6 pull-l5">
+                  <ul class="tabs">
+                    <li class="tab col s6">
+                      <a href="#cdng" class="indigo-text text-darken-4">About</a>
+                    </li>
+                    <li class="tab col s6">
+                        <a href="#rr2" class="indigo-text text-darken-4">Rules and Regulations</a>
+                      </li>
+                  </ul>
+                  <div class="col s12 offset-l1" id="cdng">
+                    <p class="flow-text indigo-text text-darken 4">CODING</p>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                  </div>
+                  <div class="col s12 offset-l1" id="rr2">
+                      <p class="flow-text indigo-text text-darken 4">RULES AND REGULATIONS</p>
+                      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                  </div>
+                </div>
+
+            </div><hr>
+
+           
+          <div class="row">
+              <div class="col s12 l4">
+                <img src="images/webde.png" alt="" class="responsive-img materialboxed">
+              </div>
+              <div class="col s12 l6 offset-17 push-l1">
+                  <ul class="tabs">
+                    <li class="tab col s6">
+                      <a href="#wd" class="indigo-text text-darken-4">About</a>
+                    </li>
+                    <li class="tab col s6">
+                        <a href="#rr3" class="indigo-text text-darken-4">Rules and Regulations</a>
+                      </li>
+                  </ul>
+                  <div class="col s12 offset-l1" id="wd">
+                    <p class="flow-text indigo-text text-darken 4">WEB DESIGN</p>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                  </div>
+                  <div class="col s12 offset-l1" id="rr3">
+                      <p class="flow-text indigo-text text-darken 4">RULES AND REGULATIONS</p>
+                      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                  </div>
+                </div>
+          </div><hr>
+
+          <div class="row right-align">
+             <div class="col s12 l4 offset-l1 push-l6">
+                <img src="images/google.png" alt="" class="responsive-img materialboxed">
+             </div>
+             <div class="col s12 l6 pull-l5">
+                <ul class="tabs">
+                  <li class="tab col s6">
+                    <a href="#gg" class="indigo-text text-darken-4">About</a>
+                  </li>
+                  <li class="tab col s6">
+                      <a href="#rr4" class="indigo-text text-darken-4">Rules and Regulations</a>
+                    </li>
+                </ul>
+                <div class="col s12 offset-l1" id="gg">
+                  <p class="flow-text indigo-text text-darken 4">GOOGLE IT</p>
+                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                </div>
+                <div class="col s12 offset-l1" id="rr4">
+                    <p class="flow-text indigo-text text-darken 4">RULES AND REGULATIONS</p>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                </div>
+              </div>
+          </div>
+      </div><br>
+
+
+      <div class="parallax-container">
+          <div class="valign-wrapper h100">
+            <h1 class=" white-text overlay center-align header">
+              <i>Non-Technical Events</i>
+            </h1>
+            <div class="parallax grey lighten-1">
+              <img src="images/parallax2.png">
+            </div>
+          </div>
+        </div><br>
+
+
+        <!--non-tech events-->
+      <div class="container">
+          <div class="row">
+              <div class="col s12 l4">
+                <img src="images/pp.jpg" alt="" class="responsive-img materialboxed">
+              </div>
+              <div class="col s12 l6 offset-17 push-l1">
+                <ul class="tabs">
+                  <li class="tab col s6">
+                    <a href="#1" class="indigo-text text-darken-4">About</a>
+                  </li>
+                  <li class="tab col s6">
+                      <a href="#2" class="indigo-text text-darken-4">Rules and Regulations</a>
+                    </li>
+                </ul>
+                <div class="col s12 offset-l1" id="1">
+                  <p class="flow-text indigo-text text-darken 4">PAPER PRESENTATION</p>
+                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                </div>
+                <div class="col s12 offset-l1" id="2">
+                    <p class="flow-text indigo-text text-darken 4">RULES AND REGULATIONS</p>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                </div>
+              </div>
+            </div><hr>
+
+            <div class="row right-align">
+              <div class="class col s12 l4 offset-l1 push-l6">
+                  <img src="images/coding.jpg" alt="" class="responsive-img materialboxed">
+              </div>
+              <div class="col s12 l6 pull-l5">
+                  <ul class="tabs">
+                    <li class="tab col s6">
+                      <a href="#3" class="indigo-text text-darken-4">About</a>
+                    </li>
+                    <li class="tab col s6">
+                        <a href="#4" class="indigo-text text-darken-4">Rules and Regulations</a>
+                      </li>
+                  </ul>
+                  <div class="col s12 offset-l1" id="3">
+                    <p class="flow-text indigo-text text-darken 4">CODING</p>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                  </div>
+                  <div class="col s12 offset-l1" id="4">
+                      <p class="flow-text indigo-text text-darken 4">RULES AND REGULATIONS</p>
+                      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                  </div>
+                </div>
+
+            </div><hr>
+
+           
+          <div class="row">
+              <div class="col s12 l4">
+                <img src="images/webde.png" alt="" class="responsive-img materialboxed">
+              </div>
+              <div class="col s12 l6 offset-17 push-l1">
+                  <ul class="tabs">
+                    <li class="tab col s6">
+                      <a href="#5" class="indigo-text text-darken-4">About</a>
+                    </li>
+                    <li class="tab col s6">
+                        <a href="#6" class="indigo-text text-darken-4">Rules and Regulations</a>
+                      </li>
+                  </ul>
+                  <div class="col s12 offset-l1" id="5">
+                    <p class="flow-text indigo-text text-darken 4">WEB DESIGN</p>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                  </div>
+                  <div class="col s12 offset-l1" id="6">
+                      <p class="flow-text indigo-text text-darken 4">RULES AND REGULATIONS</p>
+                      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                  </div>
+                </div>
+          </div><hr>
+
+          <div class="row right-align">
+             <div class="col s12 l4 offset-l1 push-l6">
+                <img src="images/google.png" alt="" class="responsive-img materialboxed">
+             </div>
+             <div class="col s12 l6 pull-l5">
+                <ul class="tabs">
+                  <li class="tab col s6">
+                    <a href="#7" class="indigo-text text-darken-4">About</a>
+                  </li>
+                  <li class="tab col s6">
+                      <a href="#8" class="indigo-text text-darken-4">Rules and Regulations</a>
+                    </li>
+                </ul>
+                <div class="col s12 offset-l1" id="7">
+                  <p class="flow-text indigo-text text-darken 4">GOOGLE IT</p>
+                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                </div>
+                <div class="col s12 offset-l1" id="8">
+                    <p class="flow-text indigo-text text-darken 4">RULES AND REGULATIONS</p>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                </div>
+              </div>
+          </div>
+      </div><br>
+
+
+      <!--schedule-->
+      <div class="container-fluid scrollspy" id="schedule"><br>
+      <div class="container">
+        <div class="row">
+        <div class="col s12 l6">
+                  <div class="schedule-warp">
+                      <div class="day-one">Schedule Febrauary 24 (Friday)</div>
+                   <div class="schedule-card">
+                     <div class="insidebox">
+                         <span class="schedule-tag">8:00 AM</span> 
+                          <span class="schedule-start">Check-In</span>                  
+                     </div> 
+                      </div>
+                      
+                      <div class="schedule-card">
+                     <div class="insidebox">
+                         <span class="schedule-tag">8:30 AM</span> 
+                          <span class="schedule-start">Opening Ceremony</span>                  
+                     </div> 
+                      </div>
+                      
+                      <div class="schedule-card">
+                     <div class="insidebox">
+                         <span class="schedule-tag">9:00 AM</span> 
+                          <span class="schedule-start">All Events Starts</span>                  
+                     </div> 
+                      </div>
+                      
+                      <div class="schedule-card">
+                     <div class="insidebox">
+                         <span class="schedule-tag">1:00 PM</span> 
+                          <span class="schedule-start"> Lunch</span>                  
+                     </div> 
+                      </div>
+                      
+                      <div class="schedule-card">
+                     <div class="insidebox">
+                         <span class="schedule-tag">2:00 PM</span> 
+                          <span class="schedule-start">Prize Distribution for winners and Runners</span>                  
+                     </div> 
+                      </div>
+                      
+                      <div class="schedule-card">
+                     <div class="insidebox">
+                         <span class="schedule-tag">3:30 PM</span> 
+                          <span class="schedule-start">Technokratz 2k19 Ends</span>                  
+                     </div> 
+                      </div>
+                  </div>
+                  </div>  
+
+          <!--fab icon-->
+          <div class="fixed-action-btn scrollspy">
+            <a class="btn-floating btn-large red">
+               <i class="large material-icons">add</i>
+            </a>
+              <ul>
+                 <li><a href="reg.html" class="btn-floating btn-large red scrollspy"><small>Register</small></a></li>
+                 <li><a class="btn-floating yellow darken-1 scrollspy" href="#cntct"><small>Contact</small></a></li>
+                 <li><a class="btn-floating green scrollspy" href="#events"><small>Events</small></a></li>
+                 <li><a class="btn-floating blue scrollspy" href="#schedule"><small>Schedule</small></a></li>
+              </ul>
+          </div>
+
+        <!--get in touch-->
+        <div class="col s12 l6 push-l1">
+          <h2 class="indigo-text text-darken-4">Get in touch..</h2>
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+          <ul class="collection hoverable">
+            <li class="collection-item hoverable"><i class="tiny material-icons prefix red-text">location_on</i>&nbsp;Anand Institute of Higher Technology</li>
+            <li class="collection-item hoverable"><i class="tiny material-icons prefix blue-text">date_range</i>&nbsp;24-02-2019</li>
+            <li class="collection-item hoverable"><i class="tiny material-icons prefix green-text">email</i>&nbsp;rajbabu@gmail.com</li>
+            <li class="collection-item hoverable"><i class="tiny material-icons prefix deep purple-text">phone</i>&nbsp;+91-8220374725 </li>
+            </ul><br>
+            <div class="input-field center">
+              <a href="reg.html" class="waves-effect waves-light indigo btn-large hoverable">Register</a>
+            </div>
+        </div></div></div><br></div>
+
+        <!--guest-->
+        <div class="container-fluid" id="guest">
+            <h2 class="indigo-text text-darken-4 center"><b>SPECIAL GUESTS</b></h2>
+            <div class="row">
+                <div class="col s12 l4">
+                    <div class="box14">
+                        <img src="http://bestjquery.com/tutorial/hover-effect/demo122/images/img-1.jpg" alt="">
+                        <div class="box-content">
+                            <h3 class="title">Williamson</h3>
+                            <span class="post">Web Developer</span>
+                            <ul class="icon">
+                                <li><a href="#"><i class="small material-icons">search</i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 l4">
+                    <div class="box14">
+                        <img src="http://bestjquery.com/tutorial/hover-effect/demo122/images/img-2.jpg" alt="">
+                        <div class="box-content">
+                            <h3 class="title">Kristiana</h3>
+                            <span class="post">Web Designer</span>
+                            <ul class="icon">
+                                <li><a href="#"><i class="small material-icons">search</i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 l4">
+                    <div class="box14">
+                        <img src="http://bestjquery.com/tutorial/hover-effect/demo122/images/img-3.jpg" alt="">
+                        <div class="box-content">
+                            <h3 class="title">Kristiana</h3>
+                            <span class="post">Web Designer</span>
+                            <ul class="icon">
+                                <li><a href="#"><i class="small material-icons">search</i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div><br>
+        </div>
+        
+
+        <!--sponsors-->
+        <div class="container">
+            <h2 class="indigo-text text-darken-4 center"><b>EVENTS SPONSORS</b></h2><br><br>
+            <div class="row">
+            <div class="col s6 l3 center-align">
+                 <img src="images/wipro.png" alt="" class="responsive-img hoverable" width="160" height="70">
+            </div>
+            <div class="col s6 l3 center-align">
+                <img src="images/wipro.png" alt="" class="responsive-img hoverable" width="160" height="70">
+            </div>
+            <div class="col s6 l3 center-align">
+                <img src="images/wipro.png" alt="" class="responsive-img hoverable" width="160" height="70">
+            </div>
+            <div class="col s6 l3 center-align">
+               <img src="images/wipro.png" alt="" class="responsive-img hoverable" width="160" height="70">
+            </div>
+            </div>
+        </div>
+
+        <div class="container-fluid scrollspy" id="cntct">
+          <div id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col s12 l4">
+                        <h4 class="white-text"><b>THE TECHNOKRATZ 2K19</b></h4>
+                        <hr>
+                        <br><br>
+                        <p class="white-text"><i class="tiny material-icons prefix green-text">date_range</i>&nbsp;24-02-2019</li></p>
+                        <p class="white-text"><i class="tiny material-icons prefix red-text">location_on</i>&nbsp;Anand Institute of Higher Technology,</p>
+                        <p class="white-text">&nbsp;&nbsp;&nbsp;Kalasalingam Nagar,</p>
+                        <p class="white-text">&nbsp;&nbsp;&nbsp;IT Corridor,</p>
+                        <p class="white-text">&nbsp;&nbsp;&nbsp;Old Mahablipuram Road,</p>
+                        <p class="white-text">&nbsp;&nbsp;&nbsp;Kazhipattur,</p>
+                        <p class="white-text">&nbsp;&nbsp;&nbsp;Chennai-603103.</p>
+                        <br><br>
+                        <a class="waves-effect waves-light btn-large" href="reg.html"><p class="white-text">Register Now</p></a><br><br>
+                        <div class="row">
+                            <div class="col s2 l1">
+                                <i class="fa fa-facebook white-text" aria-hidden="true"></i>
+                            </div>
+                            <div class="col s2 l1">
+                                <i class="fa fa-instagram white-text" aria-hidden="true"></i>
+                            </div>
+                            <div class="col s2 l1">
+                                <i class="fa fa-youtube-play white-text" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 l4 center-align">
+                      <br>
+                        <br><br><br>
+                        <img src="images/logo.png" alt="" class="responsive-img">
+                        
+                    </div>
+                    <div class="col s12 l4 right-align">
+                        <br>
+                        <h4 class="white-text"><b>CONTACT US</b></h4>
+                          <hr><br>
+                          <p class="white-text"><strong>STUDENT COORDINATORS</strong></p><br>
+                          <div class="row">
+                            <div class="col s7 l7">
+                                <img src="images/75757856.jpg" alt="" class="circle responsive-img" width="100" height="40">
+                            </div>
+                            <div class="col s5 l5 ">
+                              <p class="white-text">RAJBABU M</p>
+                              <p class="white-text"><i class="tiny material-icons prefix deep blue-text">phone</i>&nbsp;8220374725</p>
+                            </div>
+                          </div>
+                          <div class="row">
+                              <div class="col s7 l7">
+                                  <img src="images/75757856.jpg" alt="" class="circle responsive-img" width="100" height="40">
+                              </div>
+                              <div class="col s5 l5">
+                                <p class="white-text">RAJBABU M</p>
+                                <p class="white-text"><i class="tiny material-icons prefix deep blue-text">phone</i>&nbsp;8220374725</p>
+                              </div>
+                            </div> 
+                            <p class="white-text"><strong>technokratz2k19@gmail.com</strong>&nbsp;<i class="tiny material-icons prefix green-text">email</i></p><br>                 
+                            <p class="white-text">Designed with <i class="tiny material-icons pink-text">favorite</i> by RaJBabU</p>
+   
+                      </div><br>
+                  </div>
+            </div>
+          </div>
+        </div>
+        
+
+
+        
+        
+        
+      
+     
+          
+
+     
+
+
+  
+  <!-- Compiled and minified JavaScript -->
+  <script type="text/javascript" src="particles.js"></script>
+  <script type="text/javascript" src="app.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('.sidenav').sidenav();
+      $('.parallax').parallax();
+      $('.materialboxed').materialbox();
+      $('.tabs').tabs();
+      $('.fixed-action-btn').floatingActionButton();
+      $('.carousel').carousel();
+      $('.scrollspy').scrollSpy();
+
+      
+       function getTimeRemaining(endtime) {
+  var t = Date.parse(endtime) - Date.parse(new Date());
+  var seconds = Math.floor((t / 1000) % 60);
+  var minutes = Math.floor((t / 1000 / 60) % 60);
+  var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+  var days = Math.floor(t / (1000 * 60 * 60 * 24));
+  return {
+    'total': t,
+    'days': days,
+    'hours': hours,
+    'minutes': minutes,
+    'seconds': seconds
+  };
+}
+
+function initializeClock(id, endtime) {
+  var clock = document.getElementById(id);
+  var daysSpan = clock.querySelector('.days');
+  var hoursSpan = clock.querySelector('.hours');
+  var minutesSpan = clock.querySelector('.minutes');
+  var secondsSpan = clock.querySelector('.seconds');
+
+  function updateClock() {
+    var t = getTimeRemaining(endtime);
+
+    daysSpan.innerHTML = t.days;
+    hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
+    minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+    secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+
+    if (t.total <= 0) {
+      clearInterval(timeinterval);
+    }
+  }
+
+  updateClock();
+  var timeinterval = setInterval(updateClock, 1000);
+}
+
+var deadline = new Date(Date.parse(new Date()) + 100 * 24 * 60 * 60 * 1000);
+initializeClock('clockdiv', deadline);
+
+
+    });
+
+    
+  </script>
+</body>
+</html>
