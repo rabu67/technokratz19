@@ -10,25 +10,61 @@
   <!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  <title>Technokratz 2k19</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
   <style>
- 
-  #particles-js
+  #home
   {
-	height: 500%;
-  background-image: url('images/tklogo.jpg');
-  max-height: 600px;
-  width: auto;
- 
-  
+    width: 100%;
+  height: 700px;
+  background-image: url(images/Jshine.jpg);
+  background-size: 100% 100%;
+  filter: brightness(10px);
   }
   .btext{
-    color: #f9f3f4;
+    color: #ffffff;
     position: absolute;
     text-align: center;
-    top: 18%;
+    top: 12%;
     width: 100%;
     line-height: 1.4em;
   }
+  .column {
+  float: left;
+  width: 49.33%;
+  padding: 0px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+
+ /*.text-container{
+    color: rgb(255, 255, 255,.1);
+    
+    background-image: url(images/color1.jpg);
+    background-repeat: repeat-x;
+    -webkit-background-clip: text;
+    animation: animate 15s linear infinite;
+    position: absolute;
+    text-align: center;
+    top: 28%;
+    width: 100%;
+    font-family:sans-serif;
+    line-height: 1.4em;
+  }
+  @keyframes animate{
+      0%{
+          background-position: left 0px top 10px;
+      }
+      40%{
+          background-position: left 800px top 10px;
+      }
+  }*/
   
 #clockdiv{
 	font-family: sans-serif;
@@ -235,12 +271,13 @@ p {
 #footer p{
   line-height: 0.2em;
 }
-#footer a{
+#xyz a{
   border: 10px solid #00e5ff;
   border-radius: 0px;
   background-color: #0D0E1F;
   color: black;
 }
+
 #schedule{
   background-color: #eee2dc;
   margin: 0%;
@@ -251,11 +288,13 @@ p {
   padding: 1%;
 }
 
+
   </style>
 </head>
 <body>
   <!--home-->
   <div class="container-fluid scrollspy" id="home">
+    
   <div id="particles-js">
       <div class="navbar">
           <nav class="nav-wrapper transparent">
@@ -288,13 +327,27 @@ p {
                 <br><br>
                 <li class="center-align"><img src="images/logo.png" alt="" class="responsive-img"></li>
         </ul>
-      <div class="btext">
+        <!--<div class="text-container">
+            <div class="col s12 l12 m12">
+            <p><b><h3>TECHNOKRATZ 2K19</h3></b></p>
+            
+          </div> </div>-->
+       <div class="btext">
         <div class="col s12 l12 m12">
-        <p><b><h3>TECHNOKRATZ 2K19</h3></b></p>
-        <p>A NATIONAL LEVEL TECHNICAL SYMPOSIUM CONDUCTED BY</p>
-        <p>DEPARTMENT OF COMPUTER SCIENCE AND ENGINEERING</p>
-        <p>ANAND INSTITUTE OF HIGHER TECHNOLOGY</p>
-        <p><b>FEB 28 2019</b></p><br><br>
+        <div class="row">
+            <div class="column animated fadeInLeft">
+                <img src="images/logo.png" alt="" height="220" width="220" class="responsive-img">
+            </div>
+            <div class="column animated fadeInRight">
+                    <img src="images/favicon.png" alt="" height="220" width="220" class="responsive-img">
+            </div></div>
+        </div>
+        <p><b><h3 class="hide-on-small-only indigo-text text-darken-4 animated zoomIn" style="font-size:80px;">TECHNOKRATZ 2K19</h3></b></p>
+        <b><h3 class="hide-on-med-and-up indigo-text text-darken-4 animated zoomIn" style="font-weight:1000;">TECHNOKRATZ 2K19</h3></b>
+        <h5 class="animated fadeInLeft purple-text text-darken-4"><b>A NATIONAL LEVEL TECHNICAL SYMPOSIUM CONDUCTED BY</b></h5>
+        <h5 class="animated fadeInRight purple-text text-darken-4"><b>DEPARTMENT OF COMPUTER SCIENCE AND ENGINEERING</b></h5>
+        <h5 class="animated fadeInLeft purple-text text-darken-4"><b>ANAND INSTITUTE OF HIGHER TECHNOLOGY</b></h5>
+        <h4 class="animated zoomIn"><b>FEB 28 2019</b></h4><br><br>
       </div> </div>
     </div>
   </div>
@@ -305,11 +358,11 @@ p {
 	          <marquee class="indigo-text hide-on-med-and-up"><i>Switch to Desktop site for better visuals</i></marquee>
       <p><div class="container center-align">
           Technokratz 2K19 is a National Level Technical Symposium conducted by the Department of Computer Science and Engineering.After the grand success of Technokratz 2K18, we are back with a bang!.Brace yourself, as the most awaited Technokratz 2k19 is all set to rock with cool events in the month of Febrauary. Follow our Facebook and Instagram page for any future updates about the event.</center>
-        </p>
-      
-      <h4>Event will start in</h4>
-      <div id="clockdiv"> 
-        <div> 
+      </p>
+        
+      <h4 class="center-align">Event will start in</h4>
+      <div class="center-align" id="clockdiv"> 
+        <div class="center-align"> 
           <span class="days" id="day"></span> 
           <div class="smalltext">Days</div> 
         </div> 
@@ -396,7 +449,7 @@ p {
                         <li class="collection-item"><i class="material-icons tiny green">done</i>&nbsp;Maximum size of a team is 2 members.</li>
                         <li class="collection-item"><i class="material-icons tiny green">done</i>&nbsp;Each participants will be given 6 to 7 minutes  to present their ideas within 10-15slides and paper should present in IEEE format .
                         </li>
-                        <li class="collection-item"><i class="material-icons tiny green">done</i>&nbsp;Participants should upload their abstract in the below (<b>paperflix_2019@gmail.com</b>) mail id 
+                        <li class="collection-item"><i class="material-icons tiny green">done</i>&nbsp;Participants should upload their abstract in the below mail id <b>paperflix2019@gmail.com</b>  
                         </li>
                         <li class="collection-item"><i class="material-icons tiny green">done</i>&nbsp;The abstract must be submitted on or before <b>22.02.2019</b>.The selected abstract will be intimated through the respective mails.                         </li>
                         <li class="collection-item"><i class="material-icons tiny green">done</i>&nbsp;Participants are requested to bring 2 hard copies and pen drive.
@@ -407,9 +460,43 @@ p {
                           <i class="material-icons tiny">trending_flat</i>&nbsp;Department and year<br>
                           <i class="material-icons tiny">trending_flat</i>&nbsp;College name<br>
                           <i class="material-icons tiny">trending_flat</i>&nbsp;Contact number and mail id .<br>
+                          <br><a class="waves-effect waves-light indigo btn-large hoverable modal-trigger center-align" href="#event1">Check out Domains</a>
                         </li>
                       </ul>
                     </strong></p>
+                      <!-- Modal Structure -->
+                      <div id="event1" class="modal left-align">
+                        <div class="modal-content">
+                          <p class="flow-text indigo-text text-darken 4 center-align">PAPER PRESENTATION TOPICS</p>
+                          <p><strong>
+                            <ul class="collection with-header left-align hoverable">
+                              <li class="collection-item"><i class="material-icons tiny green">trending_flat</i>&nbsp;Machine Learning
+                              </li>
+                              <li class="collection-item"><i class="material-icons tiny green">trending_flat</i>&nbsp;Internet of Things
+                              </li>
+                              <li class="collection-item"><i class="material-icons tiny green">trending_flat</i>&nbsp;Cloud Computing
+                              </li>
+                              <li class="collection-item"><i class="material-icons tiny green">trending_flat</i>&nbsp;Image Processing
+                              </li>
+                              <li class="collection-item"><i class="material-icons tiny green">trending_flat</i>&nbsp;Artificial Intelligence
+                              </li>
+                              <li class="collection-item"><i class="material-icons tiny green">trending_flat</i>&nbsp;Data Mining
+                              </li>
+                              <li class="collection-item"><i class="material-icons tiny green">trending_flat</i>&nbsp;Big Data
+                              </li>
+                              <li class="collection-item"><i class="material-icons tiny green">trending_flat</i>&nbsp;Android
+                              </li>
+                              <li class="collection-item"><i class="material-icons tiny green">trending_flat</i>&nbsp;BlockChain
+                              </li>
+                              <li class="collection-item"><i class="material-icons tiny green">trending_flat</i>&nbsp;AR/VR
+                              </li>
+                            </ul>
+                          </strong></p>
+                        </div>
+                        <div class="modal-footer">
+                            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+                        </div>
+                      </div>
                 </div>
               </div>
             </div><hr>
@@ -430,7 +517,7 @@ p {
                   </ul>
                   <div class="col s12 offset-l1 offset-m1" id="cdng">
                     <p class="flow-text indigo-text text-darken 4">WEBALAR</p>
-                    <strong>web designing has direct link to visual aspect of a website. Effective web design is
+                    <strong>Web designing has direct link to visual aspect of a website. Effective web design is
                       necessary to communicate idea effectively.
                      </strong>
                   </div>
@@ -438,13 +525,17 @@ p {
                       <p class="flow-text indigo-text text-darken 4 center-align">RULES AND REGULATIONS</p>
                       <p><strong>
                         <ul class="collection with-header left-align hoverable">
-                          <li class="collection-item"><i class="material-icons tiny green">done</i>&nbsp;Mobile phones are not allowed
+                          <li class="collection-item"><i class="material-icons tiny green">done</i>&nbsp;Participants should use only HTML&CSS for designing.
                           </li>
-                          <li class="collection-item"><i class="material-icons tiny green">done</i>&nbsp;Internet is restricted
+                          <li class="collection-item"><i class="material-icons tiny green">done</i>&nbsp;Frontend Frameworks like Bootstrap,Materialize-css are not allowed.
                           </li>
-                          <li class="collection-item"><i class="material-icons tiny green">done</i>&nbsp;Judges decision is final
+                          <li class="collection-item"><i class="material-icons tiny green">done</i>&nbsp;Internet is restricted.
                           </li>
-                          <li class="collection-item"><i class="material-icons tiny green">done</i>&nbsp;Task should be completed in a time
+                          <li class="collection-item"><i class="material-icons tiny green">done</i>&nbsp;Notepad should be used to design Webpage.
+                          </li>
+                          <li class="collection-item"><i class="material-icons tiny green">done</i>&nbsp;Judges decision is final.
+                          </li>
+                          <li class="collection-item"><i class="material-icons tiny green">done</i>&nbsp;Task should be completed in a time.
                           <br><a class="waves-effect waves-light indigo btn-large hoverable modal-trigger center-align" href="#event2-lg">Check out rounds</a>
                           </li>
                         </ul>
@@ -459,14 +550,14 @@ p {
                                     </li>
                                     <li class="collection-item"><i class="material-icons tiny green">done</i>&nbsp;Content:quality and quantity of information, quality of writing and images.
                                     </li>
-                                    <li class="collection-item"><i class="material-icons tiny green">done</i>&nbsp;Technical: functionality,performance(including download speed),interactive features.
+                                    <li class="collection-item"><i class="material-icons tiny green">done</i>&nbsp;Technical: Functionality,performance,Responsiveness,interactive features.
                                     </li>
                                   </ul>
                                 </strong></p>
                                 <p class="flow-text indigo-text text-darken 4 center-align">ROUNDS</p>
                                 <p><strong>
                                   <ul class="collection with-header left-align hoverable">
-                                    <li class="collection-item"><i class="material-icons tiny green">done</i>&nbsp;<b>Round 1:</b>&nbsp;50 MCQs must be attended within 30 minutes.
+                                    <li class="collection-item"><i class="material-icons tiny green">done</i>&nbsp;<b>Round 1:</b>&nbsp;25 MCQs must be attended within 15 minutes.
                                     </li>
                                     <li class="collection-item"><i class="material-icons tiny green">done</i>&nbsp;<b>Round 2:</b>&nbsp;A website must be created based on the given scenario within a time limit of maximum 45 minutes.
                                     </li>
@@ -505,11 +596,15 @@ p {
                       <p class="flow-text indigo-text text-darken 4 center-align">RULES AND REGULATIONS</p>
                       <p><strong>
                         <ul class="collection with-header left-align">
-                          <li class="collection-item"><i class="material-icons tiny green">done</i>&nbsp;Mobile phones are not allowed
+                          <li class="collection-item"><i class="material-icons tiny green">done</i>&nbsp;Participants should use only HTML&CSS for designing.
                           </li>
-                          <li class="collection-item"><i class="material-icons tiny green">done</i>&nbsp;Internet is restricted
+                          <li class="collection-item"><i class="material-icons tiny green">done</i>&nbsp;Frontend Frameworks like Bootstrap,Materialize-css are not allowed.
                           </li>
-                          <li class="collection-item"><i class="material-icons tiny green">done</i>&nbsp;Judges decision is final
+                          <li class="collection-item"><i class="material-icons tiny green">done</i>&nbsp;Internet is restricted.
+                          </li>
+                          <li class="collection-item"><i class="material-icons tiny green">done</i>&nbsp;Notepad should be used to design Webpage.
+                          </li>
+                          <li class="collection-item"><i class="material-icons tiny green">done</i>&nbsp;Judges decision is final.
                           </li>
                           <li class="collection-item"><i class="material-icons tiny green">done</i>&nbsp;Task should be completed in a time
                             <br><a class="waves-effect waves-light indigo btn-large hoverable modal-trigger center-align" href="#event2-sm">Check out rounds</a>
@@ -526,18 +621,16 @@ p {
                               </li>
                               <li class="collection-item"><i class="material-icons tiny green">done</i>&nbsp;Content:quality and quantity of information, quality of writing and images.
                               </li>
-                              <li class="collection-item"><i class="material-icons tiny green">done</i>&nbsp;Technical: functionality,performance(including download speed),interactive features.
+                              <li class="collection-item"><i class="material-icons tiny green">done</i>&nbsp;Technical: functionality,performance,Responsiveness,interactive features.
                               </li>
                             </ul>
                           </strong></p>
                           <p class="flow-text indigo-text text-darken 4 center-align">ROUNDS</p>
                           <p><strong>
                             <ul class="collection with-header left-align hoverable">
-                              <li class="collection-item"><i class="material-icons tiny green">done</i>&nbsp;Design: Appropriateness , ease of use , visual appeal.
+                              <li class="collection-item"><i class="material-icons tiny green">done</i>&nbsp;<b>Round 1:</b>&nbsp;25 MCQs must be attended within 15 minutes.
                               </li>
-                              <li class="collection-item"><i class="material-icons tiny green">done</i>&nbsp;Content:quality and quantity of information, quality of writing and images.
-                              </li>
-                              <li class="collection-item"><i class="material-icons tiny green">done</i>&nbsp;Technical: functionality,performance(including download speed),interactive features.
+                              <li class="collection-item"><i class="material-icons tiny green">done</i>&nbsp;<b>Round 2:</b>&nbsp;A website must be created based on the given scenario within a time limit of maximum 45 minutes.
                               </li>
                             </ul>
                           </strong></p>
@@ -646,7 +739,7 @@ p {
                           <p class="flow-text indigo-text text-darken 4 center-align">ROUNDS</p>
                           <p><strong>
                             <ul class="collection with-header left-align hoverable">
-                              <li class="collection-item"><i class="material-icons tiny green">done</i>&nbsp;<b>1st Round :</b> 20 MCQs must be attended within 10 minutes.
+                              <li class="collection-item"><i class="material-icons tiny green">done</i>&nbsp;<b>1st Round :</b> 40 MCQs must be attended within 25 minutes.
                               </li>
                               <li class="collection-item"><i class="material-icons tiny green">done</i>&nbsp;<b>2nd Round :</b> Blind coding ( scenario will be given participants should do coding by turning off the monitor) 
                               </li>
@@ -706,7 +799,7 @@ p {
                      <p class="flow-text indigo-text text-darken 4 center-align">ROUNDS</p>
                      <p><strong>
                        <ul class="collection with-header left-align hoverable">
-                         <li class="collection-item"><i class="material-icons tiny green">done</i>&nbsp;<b>1st Round :</b> 20 MCQs must be attended within 10 minutes.
+                         <li class="collection-item"><i class="material-icons tiny green">done</i>&nbsp;<b>1st Round :</b> 40 MCQs must be attended within 25 minutes.
                          </li>
                          <li class="collection-item"><i class="material-icons tiny green">done</i>&nbsp;<b>2nd Round :</b> Blind coding ( scenario will be given participants should do coding by turning off the monitor) 
                          </li>
@@ -755,7 +848,7 @@ p {
                 </ul>
                 <div class="col s12 offset-l1 offset-m1" id="1">
                   <p class="flow-text indigo-text text-darken 4">ZAP-A-SEC</p>
-                  <strong>you can now zap everyone’s mind with your imagination and creativity.Come tapping up with hot brands to explore your product extensively.</strong>
+                  <strong>You can now zap everyone’s mind with your imagination and creativity.Come tapping up with hot brands to explore your product extensively.</strong>
                 </div>
                 <div class="col s12 offset-l1 offset-m1" id="2">
                     <p class="flow-text indigo-text text-darken 4">RULES</p>
@@ -779,7 +872,7 @@ p {
                         <p class="flow-text indigo-text text-darken 4 center-align">ROUNDS</p>
                         <p><strong>
                           <ul class="collection with-header left-align hoverable">
-                            <li class="collection-item"><i class="material-icons tiny green">done</i>&nbsp;<b>1st Round :</b>Set of 15 questions will be given,Finding the name of the product for the given slogan.
+                            <li class="collection-item"><i class="material-icons tiny green">done</i>&nbsp;<b>1st Round :</b>A set of 10 words will be given.The team should find those given words through action.
                             </li>
                             <li class="collection-item"><i class="material-icons tiny green">done</i>&nbsp;<b>2nd Round :</b>Maximum 5 questions will be asked,A product name will be given, you have to advertise it (advertise the product). 
                             </li>
@@ -932,6 +1025,7 @@ p {
                     <p><strong>
                       <ul class="collection with-header hoverable left-align">
                         <li class="collection-item"><i class="material-icons tiny green">done</i>&nbsp;Only short film should be submitted and no documentaries. This entries can be short digitally.</li>
+
                         <li class="collection-item"><i class="material-icons tiny green">done</i>&nbsp;The film should be an original contribution of the participants Short Films should be submitted through Google drive and sent the link to this e-mail Id:<b>rollingsirtechnokratz19@gmail.com</b>
                           The Short Film should be submitted on or before <b>20th February 2019</b>
                         </li>
@@ -942,9 +1036,50 @@ p {
                         </li>
                         <li class="collection-item"><i class="material-icons tiny green">done</i>&nbsp;<b>FORMAT:</b> The film should be in watchable format,preferably in <b>MPEG4/AVI</b> format. The recommended ratio is 16:9.</li>
                         <li class="collection-item"><i class="material-icons tiny green">done</i>&nbsp;<b>COPY RIGHT:</b> The film must not contain any copy right work belonging to the third party unless the participant have the license to use it.</li>
-                        <li class="collection-item"><i class="material-icons tiny green">done</i>&nbsp;The above mentioned instructions should be strictly followed else the short film team will be disqualified.</li>
+                        <li class="collection-item"><i class="material-icons tiny green">done</i>&nbsp;The above mentioned instructions must be strictly followed else the short film team will be disqualified.
+                          <br><a class="waves-effect waves-light indigo btn-large hoverable modal-trigger center-align" href="#event8-lg">Check out Shortfilm Categories</a>
+                        </li>
                       </ul>
                     </strong></p> 
+                    <div id="event8-lg" class="modal left-align">
+                      <div class="modal-content">
+                        <p class="flow-text indigo-text text-darken 4 center-align">SHORTFILM CATEGORIES</p>
+                        <p><strong>
+                          <ul class="collection with-header left-align hoverable">
+                            <li>
+                              <i class="material-icons tiny">trending_flat</i>&nbsp;Action<br>
+                              <i class="material-icons tiny">trending_flat</i>&nbsp;Adventure<br>
+                              <i class="material-icons tiny">trending_flat</i>&nbsp;Animation<br>
+                              <i class="material-icons tiny">trending_flat</i>&nbsp;Biography<br>
+                              <i class="material-icons tiny">trending_flat</i>&nbsp;Comedy<br>
+                              <i class="material-icons tiny">trending_flat</i>&nbsp;Coming of Age<br>
+                              <i class="material-icons tiny">trending_flat</i>&nbsp;Courtroom<br>
+                              <i class="material-icons tiny">trending_flat</i>&nbsp;Crime<br>
+                              <i class="material-icons tiny">trending_flat</i>&nbsp;Epic<br>
+                              <i class="material-icons tiny">trending_flat</i>&nbsp;Fantasy<br>
+                              <i class="material-icons tiny">trending_flat</i>&nbsp;Film Noir<br>
+                              <i class="material-icons tiny">trending_flat</i>&nbsp;Historical<br>
+                              <i class="material-icons tiny">trending_flat</i>&nbsp;Horror<br>
+                              <i class="material-icons tiny">trending_flat</i>&nbsp;Mystery<br>
+                              <i class="material-icons tiny">trending_flat</i>&nbsp;Philosophical<br>
+                              <i class="material-icons tiny">trending_flat</i>&nbsp;Political<br>
+                              <i class="material-icons tiny">trending_flat</i>&nbsp;Romance<br>
+                              <i class="material-icons tiny">trending_flat</i>&nbsp;Saga<br>
+                              <i class="material-icons tiny">trending_flat</i>&nbsp;Satire<br>
+                              <i class="material-icons tiny">trending_flat</i>&nbsp;Science fiction<br>
+                              <i class="material-icons tiny">trending_flat</i>&nbsp;Spy<br>
+                              <i class="material-icons tiny">trending_flat</i>&nbsp;Supernatural<br>
+                              <i class="material-icons tiny">trending_flat</i>&nbsp;Thriller<br>
+                              <i class="material-icons tiny">trending_flat</i>&nbsp;Urban<br>
+                              <i class="material-icons tiny">trending_flat</i>&nbsp;War<br>
+                            </li>
+                          </ul>
+                        </strong></p>
+                      </div>
+                      <div class="modal-footer">
+                          <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+                      </div>
+                    </div>
                 </div>
               </div>
           </div>
@@ -985,9 +1120,50 @@ p {
                    </li>
                    <li class="collection-item"><i class="material-icons tiny green">done</i>&nbsp;<b>FORMAT:</b> The film should be in watchable format,preferably in <b>MPEG4/AVI</b> format. The recommended ratio is 16:9.</li>
                    <li class="collection-item"><i class="material-icons tiny green">done</i>&nbsp;<b>COPY RIGHT:</b> The film must not contain any copy right work belonging to the third party unless the participant have the license to use it.</li>
-                   <li class="collection-item"><i class="material-icons tiny green">done</i>&nbsp;The above mentioned instructions should be strictly followed else the short film team will be disqualified.</li>
+                   <li class="collection-item"><i class="material-icons tiny green">done</i>&nbsp;The above mentioned instructions must be strictly followed else the short film team will be disqualified.
+                    <br><a class="waves-effect waves-light indigo btn-large hoverable modal-trigger center-align" href="#event8-small">Shortfilm Categories</a>
+                  </li>
                  </ul>
                </strong></p> 
+               <div id="event8-small" class="modal left-align">
+                <div class="modal-content">
+                  <p class="flow-text indigo-text text-darken 4 center-align">SHORTFILM CATEGORIES</p>
+                  <p><strong>
+                    <ul class="collection with-header left-align hoverable">
+                      <li>
+                              <i class="material-icons tiny">trending_flat</i>&nbsp;Action<br>
+                              <i class="material-icons tiny">trending_flat</i>&nbsp;Adventure<br>
+                              <i class="material-icons tiny">trending_flat</i>&nbsp;Animation<br>
+                              <i class="material-icons tiny">trending_flat</i>&nbsp;Biography<br>
+                              <i class="material-icons tiny">trending_flat</i>&nbsp;Comedy<br>
+                              <i class="material-icons tiny">trending_flat</i>&nbsp;Coming of Age<br>
+                              <i class="material-icons tiny">trending_flat</i>&nbsp;Courtroom<br>
+                              <i class="material-icons tiny">trending_flat</i>&nbsp;Crime<br>
+                              <i class="material-icons tiny">trending_flat</i>&nbsp;Epic<br>
+                              <i class="material-icons tiny">trending_flat</i>&nbsp;Fantasy<br>
+                              <i class="material-icons tiny">trending_flat</i>&nbsp;Film Noir<br>
+                              <i class="material-icons tiny">trending_flat</i>&nbsp;Historical<br>
+                              <i class="material-icons tiny">trending_flat</i>&nbsp;Horror<br>
+                              <i class="material-icons tiny">trending_flat</i>&nbsp;Mystery<br>
+                              <i class="material-icons tiny">trending_flat</i>&nbsp;Philosophical<br>
+                              <i class="material-icons tiny">trending_flat</i>&nbsp;Political<br>
+                              <i class="material-icons tiny">trending_flat</i>&nbsp;Romance<br>
+                              <i class="material-icons tiny">trending_flat</i>&nbsp;Saga<br>
+                              <i class="material-icons tiny">trending_flat</i>&nbsp;Satire<br>
+                              <i class="material-icons tiny">trending_flat</i>&nbsp;Science fiction<br>
+                              <i class="material-icons tiny">trending_flat</i>&nbsp;Spy<br>
+                              <i class="material-icons tiny">trending_flat</i>&nbsp;Supernatural<br>
+                              <i class="material-icons tiny">trending_flat</i>&nbsp;Thriller<br>
+                              <i class="material-icons tiny">trending_flat</i>&nbsp;Urban<br>
+                              <i class="material-icons tiny">trending_flat</i>&nbsp;War<br>
+                      </li>
+                    </ul>
+                  </strong></p>
+                </div>
+                <div class="modal-footer">
+                    <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+                </div>
+              </div>
            </div>
          </div>
      </div>
@@ -1135,7 +1311,7 @@ p {
             </div>
             </div>
         </div>-->
-
+        
         <!--footer-->
         <div class="container-fluid scrollspy" id="cntct">
           <div id="footer">
@@ -1153,16 +1329,16 @@ p {
                         <p class="white-text">&nbsp;&nbsp;&nbsp;Kazhipattur,</p>
                         <p class="white-text">&nbsp;&nbsp;&nbsp;Chennai-603103.</p>
                         <br><br>
-                        <a class="waves-effect waves-light btn-large" href="reg.html"><p class="white-text">Register Now</p></a><br><br>
+                        <div id="xyz"><a class="waves-effect waves-light btn-large" href="reg.html"><p class="white-text">Register Now</p></a><br><br></div>
                         <div class="row">
                             <div class="col s2 l1 m1">
-                                <i class="fa fa-facebook white-text" aria-hidden="true"></i>
+                               <a href="https://www.facebook.com/technokratz2k19"><i class="fa fa-facebook white-text" aria-hidden="true"></i></a>
                             </div>
                             <div class="col s2 l1 m1">
-                                <i class="fa fa-instagram white-text" aria-hidden="true"></i>
+                                <a href="https://www.instagram.com/technokratz2k19/"><i class="fa fa-instagram white-text" aria-hidden="true"></i></a>
                             </div>
                             <div class="col s2 l1 m1">
-                                <i class="fa fa-youtube-play white-text" aria-hidden="true"></i>
+                                <a href="#"><i class="fa fa-youtube-play white-text" aria-hidden="true"></i></a>
                             </div>
                         </div>
                     </div>
@@ -1170,7 +1346,6 @@ p {
                       <br>
                         <br><br><br>
                         <img src="images/logo.png" alt="" class="responsive-img">
-                        
                     </div>
                     <div class="col s12 l4 m4">
                         <br>
@@ -1178,14 +1353,12 @@ p {
                           <hr><br>
                           <p class="white-text"><strong>STUDENT COORDINATORS</strong></p><br>
                           <div class="row">
-                            
                             <div class="col s5 l5 m5">
                               <p class="white-text">SATHISH</p>
                               <p class="white-text">Ph:&nbsp;7871146340</p>
                             </div>
                           </div>
                           <div class="row">
-                              
                               <div class="col s5 l5 m5">
                                 <p class="white-text">ASHRAF&nbsp;HANIFA</p>
                                 <p class="white-text">Ph:&nbsp;8807920042</p>
@@ -1194,7 +1367,6 @@ p {
                             <P class="white-text">Mail us regarding query at</P>
                             <p class="white-text"><strong>technokratz2k19@gmail.com</strong>&nbsp;</p><br>                 
                             <h6 class="white-text">Coprights Reserved © Technokratz2k19</h6>
-   
                       </div><br>
                   </div>
             </div>
