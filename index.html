@@ -4,19 +4,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="icon" href="images/favicon.png" type="image/png">
-  <link rel="stylesheet" type="text/css" href="animate.css">
+ <link rel="stylesheet" type="text/css" href="animate.css">
   <!--Import Google Icon Font-->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  <title>Technokratz 2k19</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
   <style>
   #home
   {
     width: 100%;
-  height: 700px;
-  background-image: url(images/JShine.jpg);
+  height: 600px;
+  background-image: url(images/tklogo.jpg);
   background-size: 100% 100%;
   filter: brightness(10px);
   }
@@ -24,26 +23,11 @@
     color: #ffffff;
     position: absolute;
     text-align: center;
-    top: 12%;
+    top: 28%;
     width: 100%;
     line-height: 1.4em;
   }
-  .column {
-  float: left;
-  width: 49.33%;
-  padding: 0px;
-}
-
-/* Clearfix (clear floats) */
-.row::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
-
-
- /*.text-container{
+ /* .text-container{
     color: rgb(255, 255, 255,.1);
     
     background-image: url(images/color1.jpg);
@@ -277,7 +261,6 @@ p {
   background-color: #0D0E1F;
   color: black;
 }
-
 #schedule{
   background-color: #eee2dc;
   margin: 0%;
@@ -287,7 +270,37 @@ p {
   background-color:#def2f1;
   padding: 1%;
 }
-
+.imgtxt{
+ 
+  float: left;
+  margin-top: 150px;
+  margin-left: 150px;
+}
+.imgtxt1{
+ 
+ float: left;
+ margin-top: 150px;
+ margin-left: 35px;
+}
+.ctext{
+  float:right;
+  margin-top: 160px;
+  margin-right: 100px;
+}
+.ctext1{
+  float:right;
+  margin-top: 160px;
+  margin-right: 16px;
+}
+#fb1{
+  background-color: #3b5998;
+}
+#insta1{
+  background-color:#833AB4;
+}
+#yt1{
+  background-color:#ff0000;
+}
 
   </style>
 </head>
@@ -332,23 +345,44 @@ p {
             <p><b><h3>TECHNOKRATZ 2K19</h3></b></p>
             
           </div> </div>-->
+          <div class="imgtxt hide-on-med-and-down">
+            <ul>
+              <li><img src="images/logo.png" alt="" class="responsive-img" width="200" height="200"></li>
+              <li><h6 class="white-text center-align"><b>PROUDLY PRESENTS</b></h6></li>
+            </ul>
+          </div>
+          <div class="imgtxt1 hide-on-large-only hide-on-small-only">
+              <ul>
+                <li><img src="images/logo.png" alt="" class="responsive-img" width="200" height="200"></li>
+                <li><h6 class="white-text center-align"><b>PROUDLY PRESENTS</b></h6></li>
+              </ul>
+            </div>
+
        <div class="btext">
         <div class="col s12 l12 m12">
-        <div class="row">
-            <div class="column animated fadeInLeft">
-                <img src="images/logo.png" alt="" height="220" width="220" class="responsive-img">
-            </div>
-            <div class="column animated fadeInRight">
-                    <img src="images/favicon.png" alt="" height="220" width="220" class="responsive-img">
-            </div></div>
-        </div>
-        <p><b><h3 class="hide-on-small-only indigo-text text-darken-4 animated zoomIn" style="font-size:80px;">TECHNOKRATZ 2K19</h3></b></p>
-        <b><h3 class="hide-on-med-and-up indigo-text text-darken-4 animated zoomIn" style="font-weight:1000;">TECHNOKRATZ 2K19</h3></b>
-        <h5 class="animated fadeInLeft purple-text text-darken-4"><b>A NATIONAL LEVEL TECHNICAL SYMPOSIUM CONDUCTED BY</b></h5>
-        <h5 class="animated fadeInRight purple-text text-darken-4"><b>DEPARTMENT OF COMPUTER SCIENCE AND ENGINEERING</b></h5>
-        <h5 class="animated fadeInLeft purple-text text-darken-4"><b>ANAND INSTITUTE OF HIGHER TECHNOLOGY</b></h5>
-        <h4 class="animated zoomIn"><b>FEB 28 2019</b></h4><br><br>
+        <p><b><h3>TECHNOKRATZ 2K19</h3></b></p>
+        <p>A NATIONAL LEVEL TECHNICAL SYMPOSIUM CONDUCTED BY</p>
+        <p>DEPARTMENT OF COMPUTER SCIENCE AND ENGINEERING</p>
+        <p>ANAND INSTITUTE OF HIGHER TECHNOLOGY</p>
+        <h4><b>FEB 28 2019</b></h4><br><br>
       </div> </div>
+
+      <div class="ctext hide-on-med-and-down">
+        <ul class="center-align">
+          <li><h5 class="white-text">Come with your ideas,</h5></li>
+          <li><h5 class="white-text">Learn More Stuffs,</h5></li>
+          <li><h5 class="white-text">Leave Inspired...</h5></li>
+          <a href="https://www.facebook.com/technokratz2k19" id="fb1" class="waves-effect waves-light btn"><i class="fa fa-facebook white-text" aria-hidden="true"></i></a>&nbsp;<a href="https://www.instagram.com/technokratz2k19/" id="insta1" class="waves-effect waves-light btn"><i class="fa fa-instagram white-text" aria-hidden="true"></i></a>&nbsp;<a href="#" id="yt1" class="waves-effect waves-light btn"><i class="fa fa-youtube-play white-text" aria-hidden="true"></i></a>
+        </ul>
+      </div>
+      <div class="ctext1 hide-on-large-only hide-on-small-only">
+          <ul class="center-align">
+              <li><h5 class="white-text">Come with your ideas,</h5></li>
+              <li><h5 class="white-text">Learn More Stuffs,</h5></li>
+              <li><h5 class="white-text">Leave Inspired...</h5></li>
+            <a href="https://www.facebook.com/technokratz2k19" id="fb1" class="waves-effect waves-light btn"><i class="fa fa-facebook white-text" aria-hidden="true"></i></a>&nbsp;<a href="https://www.instagram.com/technokratz2k19/" id="insta1" class="waves-effect waves-light btn"><i class="fa fa-instagram white-text" aria-hidden="true"></i></a>&nbsp;<a href="#" id="yt1" class="waves-effect waves-light btn"><i class="fa fa-youtube-play white-text" aria-hidden="true"></i></a>
+          </ul>
+        </div>
     </div>
   </div>
 
@@ -358,11 +392,11 @@ p {
 	          <marquee class="indigo-text hide-on-med-and-up"><i>Switch to Desktop site for better visuals</i></marquee>
       <p><div class="container center-align">
           Technokratz 2K19 is a National Level Technical Symposium conducted by the Department of Computer Science and Engineering.After the grand success of Technokratz 2K18, we are back with a bang!.Brace yourself, as the most awaited Technokratz 2k19 is all set to rock with cool events in the month of Febrauary. Follow our Facebook and Instagram page for any future updates about the event.</center>
-      </p>
-        
-      <h4 class="center-align">Event will start in</h4>
-      <div class="center-align" id="clockdiv"> 
-        <div class="center-align"> 
+        </p>
+      
+      <h4>Event will start in</h4>
+      <div id="clockdiv"> 
+        <div> 
           <span class="days" id="day"></span> 
           <div class="smalltext">Days</div> 
         </div> 
@@ -449,7 +483,7 @@ p {
                         <li class="collection-item"><i class="material-icons tiny green">done</i>&nbsp;Maximum size of a team is 2 members.</li>
                         <li class="collection-item"><i class="material-icons tiny green">done</i>&nbsp;Each participants will be given 6 to 7 minutes  to present their ideas within 10-15slides and paper should present in IEEE format .
                         </li>
-                        <li class="collection-item"><i class="material-icons tiny green">done</i>&nbsp;Participants should upload their abstract in the below mail id <b>paperflix2019@gmail.com</b>  
+                        <li class="collection-item"><i class="material-icons tiny green">done</i>&nbsp;Participants should upload their abstract in the below mail id <b>paperflix_2019@gmail.com</b>  
                         </li>
                         <li class="collection-item"><i class="material-icons tiny green">done</i>&nbsp;The abstract must be submitted on or before <b>22.02.2019</b>.The selected abstract will be intimated through the respective mails.                         </li>
                         <li class="collection-item"><i class="material-icons tiny green">done</i>&nbsp;Participants are requested to bring 2 hard copies and pen drive.
@@ -1390,8 +1424,7 @@ p {
 
   
   <!-- Compiled and minified JavaScript -->
-  <script type="text/javascript" src="particles.js"></script>
-  <script type="text/javascript" src="app.js"></script>
+  
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
   <script>
